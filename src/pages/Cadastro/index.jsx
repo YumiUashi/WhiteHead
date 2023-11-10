@@ -27,36 +27,36 @@ const Cadastro = () => {
         <div id="Cadastro">
             <form className="form" onSubmit={handleSubmit}>
                 <div className="field">
-                    <label htmlFor="email">Email: </label>
-                        <input type="email" name="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
-                </div>
-                <div className="field">
-                    <label htmlFor="nome">Nome: </label>
+                    <label htmlFor="nome">Nome do Paciente: </label>
                         <input type="name" name="name" id="name" value={nome} onChange={(e) => setNome(e.target.value)}/>
                 </div>
                 <div className="field">
-                    <label htmlFor="CPF">CPF: </label>
+                    <label htmlFor="CPF">CPF do Paciente: </label>
                         <input type="CPF" name="CPF" id="CPF" value={cpf} onChange={(e) => setCpf(e.target.value)}/>
                 </div>
                 <div className="field">
-                    <label htmlFor="nomeRes">Nome do Responsavel: </label>
+                    <label htmlFor="nomeRes">Nome do Responsável: </label>
                         <input type="nameRes" name="nameRes" id="nameRes" value={nomeRes} onChange={(e) => setNomeRes(e.target.value)}/>
                 </div>
                 <div className="field">
-                    <label htmlFor="CpfRes">Cpf Responsavel: </label>
+                    <label htmlFor="email">Email do Responsável: </label>
+                        <input type="email" name="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                </div>
+                <div className="field">
+                    <label htmlFor="CpfRes">CPF do Responsável: </label>
                         <input type="CpfRes" name="CpfRes" id="CpfRes" value={cpfRes} onChange={(e) => setCpfRes(e.target.value)}/>
                 </div>
                 <div className="field">
-                    <label htmlFor="numeroRes">numero do Responsavel: </label>
+                    <label htmlFor="numeroRes">Celular do Responsável: </label>
                         <input type="numeroRes" name="numeroRes" id="numeroRes" value={numeroRes} onChange={(e) => setNumeroRes(e.target.value)}/>
                 </div>
                 <div className="enter">
-                    <button type="submit" onClick={handleContinuar}>continuar</button>
+                    <button className="BotaoCadastrarPaciente" type="submit" onClick={handleContinuar}>Cadastrar</button>
                 </div>
                 </form>
                
                 <div className="back">
-                    <button type="submit" onClick={handleVoltar}>voltar</button>
+                    <button className="BotaoVoltarCadastroPaciente" type="submit" onClick={handleVoltar}>voltar</button>
                 </div>
         </div>
     )

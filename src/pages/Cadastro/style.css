@@ -5,6 +5,7 @@
     justify-content: center;
     min-height: 100vh;
     padding: 0 2rem;
+    background-color: #fff;
 }
 #Cadastro .form{
     background-color: #f1f1f1;
@@ -31,3 +32,32 @@
     flex-direction: row-reverse;
     padding-top: 10px;
 }
+
+#Cadastro .BotaoCadastrarPaciente{
+
+    margin-top: 2px;
+    background: #E96744;
+    color: #fff;
+    border: none;
+    border: 0px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 2px 2px;
+    height: 5vh;
+  
+  }
+
+#Cadastro .back{
+   margin-left: 435px;
+  }
+
+#Cadastro .BotaoVoltarCadastroPaciente{
+
+    margin-top: 10px;
+    background: #E96744;
+    color: #fff;
+    border: none;
+    border: 0px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 2px 2px;
+    height: 5vh;
+  
+  }
+   

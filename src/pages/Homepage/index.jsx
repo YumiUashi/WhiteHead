@@ -22,22 +22,26 @@ const Homepage = () => {
 
     const searchLowerCase = search.toLocaleLowerCase()
     const pesquisaPaciente = Pacientes.filter(Paciente => Paciente.nome.toLocaleLowerCase().includes(searchLowerCase));
+    const imagePath = require('./imagemHomepage/logoPerfil.jpg');
     return (
         <div id="homepage">
             <div id="header">
                 <div className="cadastroPaciente">
-                    <button onClick={ handleCadastroPaciente}>Cadastro paciente</button>
+                    <button className="BotaoCadastroPaciente" onClick={ handleCadastroPaciente}>Cadastro de Paciente</button>
                 </div> 
                 <div className="exit">
-                    <button onClick={handleDeslogar}>Sair</button>
+                    <button className="BotaoSairHomePage" onClick={handleDeslogar}>Sair</button>
                 </div>
                 <div className="name">
-                    <h3>Medico</h3>
+                    <h3>Médico</h3>
+                </div>
+                <div>
+                    <img className="logoPerfilMedico" src={imagePath} alt="LogoPerfilMedico"/>
                 </div>
                
             </div>
             <div className="pesquisa">
-                <input className="pesquisa1" type="search" value={search} onChange={(e) => setSearch(e.target.value)}></input>
+                <input className="pesquisa1" type="search" placeholder="Digite aqui..." value={search} onChange={(e) => setSearch(e.target.value)}></input>
             </div>
 
             <ul className="lista">
@@ -49,7 +53,7 @@ const Homepage = () => {
               
             </ul>
             <div className="back">
-                    <button onClick={handleVoltar}>voltar</button>
+                    <button className="BotaoVoltarHomePage" onClick={handleVoltar}>Voltar</button>
                 </div>
         </div>
     )

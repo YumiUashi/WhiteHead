@@ -12,21 +12,26 @@ const LoginPage = () => {
         e.preventDefault();
         navigate('/Homepage')
     }
+
+    const imagePath = require('./imagem/logo.png');
     
     return (
         <div id="login">
-            <h1 className="title">Login do sistema</h1>
+            <div>
+                <img className="logo" src={imagePath} alt="LogoLogin"/>
+            </div>
             <form className="form" onSubmit={handleSubmit}>
+            <h1 className="title">Login do Sistema</h1>
                 <div className="field">
-                    <label htmlFor="email">Email</label>
+                    <label htmlFor="email">Email:</label>
                         <input type="email" name="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                 </div>
                 <div className="field">
-                    <label htmlFor="password">Senha</label>
+                    <label htmlFor="password">Senha:</label>
                         <input type="password" name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                 </div>
                 <div className="actions">
-                    <button type="submit">Entrar</button>
+                    <button className="BotaoEntrar" type="submit">Entrar</button>
                 </div>
             </form>
         </div>
