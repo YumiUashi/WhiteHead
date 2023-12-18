@@ -1,111 +1,84 @@
-#homepage{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    min-width: 50%;
-    background-color: #f1f1f1;
-    
+#homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 50%;
+  background-color: #000000;
 }
 
 #homepage #header {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    width: 70vh;
-    margin: 10px;
-    padding: 5px;
-    background-color: #fff;
-}
-
- #homepage #header .cadastroPaciente{
-    margin-top: 10px;
-    padding-right: 39%;
- }
-
- #homepage #header .BotaoCadastroPaciente{
-
-    background: #E96744;
-    color: #fff;
-    border: none;
-    border-radius: 0 0 2px 2px;
-    height: 5vh;
-
- }
-
- #homepage #header .exit{
-    margin-top: 10px;
-    padding-right: 10%;
- }
-
- #homepage #header .BotaoSairHomePage{
-
-  margin-top: 2px;
-  background: #E96744;
-  color: #fff;
-  border: none;
-  border: 0px solid rgba(0, 0, 0, 0.1);
-  border-radius: 0 0 2px 2px;
-  height: 5vh;
-
-}
-
-#homepage #header .logoPerfilMedico{
-  margin: 15px;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70vh;
+  margin: 10px;
+}
+
+#homepage #header .cadastroPaciente {
+  margin-top: 10px;
+}
+
+#homepage #header .BotaoCadastroPaciente {
+  background: #ffffff;
+  color: #000000;
+  border-radius: 25px;
+  padding: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#homepage #header .exit {
+  margin-top: 10px;
+  padding-left: 430px;
+}
+
+#homepage #header .BotaoSairHomePage {
+  background: #ffffff;
+  color: #000000;
+  border-radius: 25px;
+  padding: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#homepage .pesquisa1 {
+  border-radius: 25px;
+  flex-direction: column;
   align-items: center;
-  height: 5vh;
+  justify-content: center;
+  width: 70vh;
+  height: 25px;
 }
 
-
- #homepage .pesquisa1{
-
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   width: 70vh;
-   height: 25px;
-   
- }
-
- #homepage .lista{
-   list-style: none;
-   display: flex;
-   flex-direction: column;
-   gap: 5px;
-   padding: 0;
- }
-
- #homepage .itemLista{
-   width: 70vh;
-   background-color: #f1f1f1;
-   border-radius: 5px;
-   border: solid;
-   border-color: black;
-  
- }
-/* 
- #homepage  #p .nomeDaPesquisa {
-   padding-left: 10px;
- } */
-
- #homepage .back{
-   padding-left: 620px;
- }
- 
- #homepage .BotaoVoltarHomePage{
-
-  margin-top: 2px;
-  background: #E96744;
-  color: #fff;
-  border: none;
-  border: 0px solid rgba(0, 0, 0, 0.1);
-  border-radius: 0 0 2px 2px;
-  height: 5vh;
-
+#homepage .lista {
+  border-radius: 25px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0;
 }
- 
 
- 
+#homepage .itemLista {
+  border-radius: 25px;
+  width: 70vh;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  border: solid;
+  border-color: black;
+}
+
+#homepage .back {
+  padding-left: 620px;
+}
+
+#homepage .BotaoVoltarHomePage {
+  background: #ffffff;
+  color: #000000;
+  border-radius: 25px;
+  padding: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
