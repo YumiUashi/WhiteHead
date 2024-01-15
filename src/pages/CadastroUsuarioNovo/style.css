@@ -1,19 +1,66 @@
-#TelaCadastroUsuarioNovo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 0 2rem;
-    background-color: #000000;
-}
-#TelaCadastroUsuarioNovo .form{
-    width: 100%;
-    max-width: 480px;
-    padding: 0.5rem;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-#TelaCadastroUsuarioNovo .label{
+#FundoTelaCadastroUsuarioNovo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e1e1e;
+  width: 100vw;
+  height: 100vh;
+}
+
+#TelaCadastroUsuarioNovo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 540px;
+  height: 720px;
+  background-color: #328c88;
+  border-radius: 64px;
+}
+
+#TelaCadastroUsuarioNovo .form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  align-content: space-between;
+  height: 100%;
+  padding: 48px;
+}
+
+#TelaCadastroUsuarioNovo .form .cima {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: #d9d9d9;
+}
+#TelaCadastroUsuarioNovo .form .cima h1 {
+  font-size: 32px;
+}
+#TelaCadastroUsuarioNovo .form .cima h2 {
+  font-size: 24px;
+}
+
+#TelaCadastroUsuarioNovo .form .cima img {
+  width: 80px;
+  aspect-ratio: 1;
+}
+
+/* #login .logo {
+  margin-right: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+#TelaCadastroUsuarioNovo .title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,49 +71,55 @@
   border-bottom: 1px solid #eee;
   padding-bottom: 20px;
 }
-#TelaCadastroUsuarioNovo  .field{
-    padding-bottom: 0.5rem ;
-    color: #ffffff;
-}
 
-#TelaCadastroUsuarioNovo  .field input{
-  border-radius: 25px;
-  display: block;
-  padding: 15px 10px;
-  margin-bottom: 10px;
+#TelaCadastroUsuarioNovo .meio {
   width: 100%;
-  border: 1px solid #ddd;
-  transition: border-width 0.2s ease;
+}
+
+#TelaCadastroUsuarioNovo .field {
+  padding-bottom: 0.5rem;
+  color: #ffffff;
+  border-radius: 16px;
+  width: 100%;
+}
+
+#TelaCadastroUsuarioNovo .field input {
+  border-radius: 16px;
+  margin-bottom: 10px;
+  border: 5px solid #ddd;
   color: #ccc;
+  background-color: #328c88;
+  width: 100%;
+  height: 80px;
+  font-size: 24px;
+}
+::placeholder {
+  color: #d9d9d9;
+  opacity: 1;
+  padding-left: 32px;
 }
 
-#TelaCadastroUsuarioNovo  .actions{
-    display: flex;
-    justify-content: flex-end;
+#TelaCadastroUsuarioNovo .baixo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
 }
 
-#TelaCadastroUsuarioNovo .BotaoCadastrarUsuarioNovo{
+#TelaCadastroUsuarioNovo .baixo .criar-conta a {
+  color: #d9d9d9;
+  text-decoration: underline;
+  font-size: 24px;
+}
 
-    background: #ffffff;
-    color: #000000;
-    border-radius: 25px;
-    padding: 10px;
-    font-weight: 600;
-    cursor: pointer;
-  }
-
-#TelaCadastroUsuarioNovo .back{
-   margin-left: 435px;
-  }
-
-#TelaCadastroUsuarioNovo .BotaoVoltarCadastroUsuarioNovo{
-
-    background: #ffffff;
-    color: #000000;
-    border-radius: 25px;
-    padding: 10px;
-    font-weight: 600;
-    cursor: pointer;
-  
-  }
-   
+#TelaCadastroUsuarioNovo .baixo button {
+  width: 100%;
+  height: 80px;
+  border: none;
+  border-radius: 16px;
+  font-size: 32px;
+  color: #328c88;
+  cursor: pointer;
+}

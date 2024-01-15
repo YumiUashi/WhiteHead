@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
+import logo from "../Login/imagem/logo.svg";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -13,45 +14,45 @@ const LoginPage = () => {
     navigate("/Homepage");
   };
 
-  const imagePath = require("./imagem/logo-1.png");
+  // const imagePath = require('../Login/imagem/logo.svg');
 
   return (
     <div id="TelaLogin">
-      <div>
-        <img className="logo" src={imagePath} alt="LogoLogin" />
-      </div>
       <div id="login">
         <form className="form" onSubmit={handleSubmit}>
-          <div>
-            <h1 className="title">Login</h1>
+          <div className="cima">
+            <img src={logo} alt="logo" />
+            <h1 className="titulo">Bem vindo</h1>
+            <h2 className="subtitulo"> insira seus dados</h2>
+          </div>
+
+          <div className="meio">
             <div className="field">
-              <label htmlFor="email">Email:</label>
               <input
                 type="email"
                 name="email"
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                placeholder="Usuário"
               />
             </div>
             <div className="field">
-              <label htmlFor="password">Senha:</label>
               <input
                 type="password"
                 name="password"
                 id="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                placeholder="Senha"
               />
             </div>
-            <div className="field">
-                Já possui conta? <a href="/TelaCadastroUsuarioNovo"> Criar conta. </a>
+          </div>
+          <div className="baixo">
+            <div className="criar-conta">
+              <a href="/TelaCadastroUsuarioNovo"> Criar conta </a>
             </div>
-            <div className="action">
-              <button className="BotaoEntrar" type="submit">
-                Entrar
-              </button>
-            </div>
+            <button type="submit">Entrar</button>
           </div>
         </form>
       </div>
