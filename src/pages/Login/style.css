@@ -53,13 +53,6 @@
   aspect-ratio: 1;
 }
 
-/* #login .logo {
-  margin-right: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 #login .title {
   display: flex;
   justify-content: center;

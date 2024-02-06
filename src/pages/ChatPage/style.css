@@ -13,25 +13,52 @@
   height: 100vh;
 }
 
-#homepage {
+#chatPage {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-#homepage h2 {
-  width: 100%;
-  color: #a1d1be;
+#chatPage .voltar {
+  flex-direction: row;
+  display: flex;
 }
 
-#homepage #header {
+#chatPage .voltar img {
+  margin-top: 10px;
+  height: 20px;
+  margin-right: 20px;
+}
+
+#chatPage .btnVoltar {
+  background: none;
+  border: transparent;
+  font-size: 32px;
+  color: #f4f4f4;
+  text-decoration: underline;
+}
+
+#chatPage .nome {
+  flex-direction: row;
+  display: flex;
+}
+
+#chatPage h2 {
+  color: #d9d9d9;
+  margin-right: 10px;
+}
+
+#chatPage #header {
   display: flex;
   flex-direction: row;
+  align-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
 }
 
-#homepage input {
+#chatPage input {
   border: 3px solid #a1d1be;
   border-radius: 16px;
   width: 1024px;
@@ -61,7 +88,7 @@
   color: red;
 } */
 
-#homepage #header .BotaoCadastroPaciente {
+#chatPage #header .BotaoCadastroPaciente {
   background: #a1d1be;
   color: #000000;
   border-radius: 16px;
@@ -72,7 +99,7 @@
   height: 80px;
 }
 
-#homepage ul {
+#chatPage .meio {
   width: 100%;
   list-style: none;
   display: flex;
@@ -82,11 +109,30 @@
   border: 5px solid #d9d9d9;
   padding: 16px;
   border-radius: 16px;
-  overflow-y: scroll;
-  height: 640px;
 }
 
-#homepage .itemLista {
+#chatPage .chat-messages {
+  overflow-y: auto;
+  max-height: 400px; /* Adjust as needed */
+  padding: 10px;
+}
+
+#chatPage .message {
+  background-color: #328c88;
+  color: #f4f4f4;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
+
+#chatPage .message-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+#chatPage .itemLista {
   width: 100%;
   color: #d9d9d9;
   background-color: none;
@@ -96,16 +142,29 @@
   margin-bottom: 4px;
   padding-bottom: 4px;
 }
-#homepage .itemLista .botoes {
+.botoes {
   display: flex;
+  margin-top: 24px;
+  align-items: center;
   gap: 4px;
 }
 
 .botoes button {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: none;
+}
+.btn1 {
+  background-color: #d9d9d9;
+}
+
+.btn2 {
+  background-color: #328c88;
+}
+
+.btn3 {
+  background-color: #a1d1be;
 }
 
 /* total width */

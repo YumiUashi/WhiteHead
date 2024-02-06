@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-#TelaCadastroPaciente {
+#TelaDeletarPaciente {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,7 +13,7 @@
   height: 100vh;
 }
 
-#TelaCadastroPaciente .telaCadastroTudo {
+#TelaDeletarPaciente .telaDeletarTudo {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +23,7 @@
   border-radius: 16px;
 }
 
-#TelaCadastroPaciente .form {
+#TelaDeletarPaciente .form {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -32,7 +32,7 @@
   padding: 28px 90px 56px 90px;
 }
 
-#TelaCadastroPaciente .form .cima {
+#TelaDeletarPaciente .form .cima {
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -52,14 +52,14 @@ h1 {
   border: none;
 }
 
-#TelaCadastroPaciente label {
+#TelaDeletarPaciente label {
   padding-left: 10px;
   margin-bottom: 10px;
   font-size: 40px;
   color: #3c3f40;
 }
 
-#TelaCadastroPaciente .field input {
+#TelaDeletarPaciente .field input {
   margin-top: 10px;
   background-color: transparent;
   border-radius: 16px;
@@ -69,7 +69,7 @@ h1 {
   border: 5px solid #3c3f40;
 }
 
-#TelaCadastroPaciente .BotaoCadastrarPaciente {
+#TelaDeletarPaciente .BotaoCadastrarPaciente {
   background: #ffffff;
   color: #000000;
   border-radius: 25px;
@@ -78,8 +78,8 @@ h1 {
   cursor: pointer;
 }
 
-#TelaCadastroPaciente .BotaoCadastrarPaciente {
-  background: #328c88;
+#TelaDeletarPaciente .BotaoCadastrarPaciente {
+  background: #8f3832;
   color: #f1f1f1;
   border-radius: 16px;
   padding: 10px;

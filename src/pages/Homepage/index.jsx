@@ -1,54 +1,73 @@
 import React from "react";
-import "./style.css"
+import "./style.css";
 import { Pacientes } from "../../data/index.ts";
 import { useNavigate } from "react-router-dom";
-
+import conversa from "../Homepage/imagemHomepage/conversa.png";
+import deletar from "../Homepage/imagemHomepage/deletar.png";
+import editar from "../Homepage/imagemHomepage/editar.png";
 
 const Homepage = () => {
+  const [search, setSearch] = React.useState("");
+  const navigate = useNavigate();
 
-    const [search, setSearch] = React.useState("");
-    
+  const handleCadastroPaciente = () => {
+    navigate("/TelaCadastroPaciente");
+  };
+  const handleEditar = (id) => {
+    navigate("/TelaEditarPaciente/");
+  };
+  const handleDeletar = () => {
+    navigate("../TelaDeletarPaciente");
+  };
+  const handleConversa = () => {
+    navigate("");
+  };
 
-    const navigate = useNavigate()
-    const handleVoltar = () => {
-        navigate(-1);
-      };
-      const handleCadastroPaciente = () => {
-        navigate("/TelaCadastroPaciente");
-      };
-      const handleDeslogar = () => {
-        navigate("/Login");
-      };
+  const searchLowerCase = search.toLocaleLowerCase();
+  const pesquisaPaciente = Pacientes.filter((Paciente) =>
+    Paciente.nome.toLocaleLowerCase().includes(searchLowerCase)
+  );
+  return (
+    <div id="total">
+      <div id="homepage">
+        <h2> Buscar por paciente:</h2>
+        <div id="header">
+          <input
+            type="text"
+            placeholder="Insira o nome do paciente... "
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          ></input>
 
-    const searchLowerCase = search.toLocaleLowerCase()
-    const pesquisaPaciente = Pacientes.filter(Paciente => Paciente.nome.toLocaleLowerCase().includes(searchLowerCase));
-    return (
-        <div id="homepage">
-            <div id="header">
-                <div className="cadastroPaciente">
-                    <button className="BotaoCadastroPaciente" onClick={ handleCadastroPaciente}>Cadastro de Paciente</button>
-                </div> 
-                <div className="exit">
-                    <button className="BotaoSairHomePage" onClick={handleDeslogar}>Sair</button>
-                </div>               
-            </div>
-            <div className="pesquisa">
-                <input className="pesquisa1" type="search" placeholder="Digite aqui..." value={search} onChange={(e) => setSearch(e.target.value)}></input>
-            </div>
-
-            <ul className="lista">
-                 {pesquisaPaciente.map((pac) =>(
-             <li className="itemLista" key={pac.Pacientes}>
-                <p className="nomeDaPesquisa">{pac.nome}</p>
-             </li>
-                ))}
-              
-            </ul>
-            <div className="back">
-                    <button className="BotaoVoltarHomePage" onClick={handleVoltar}>Voltar</button>
-                </div>
+          <button
+            className="BotaoCadastroPaciente"
+            onClick={handleCadastroPaciente}
+          >
+            Cadastro de Paciente
+          </button>
         </div>
-    )
-}
+
+        <ul>
+          {pesquisaPaciente.map((pac) => (
+            <li className="itemLista" key={pac.Pacientes}>
+              <p className="nomeDaPesquisa">{pac.nome}</p>
+              <div className="botoes">
+                <button onClick={handleDeletar}>
+                  <img src={deletar} alt="" />
+                </button>
+                <button onClick={handleEditar(pac.id)}>
+                  <img src={editar} alt="" />
+                </button>
+                <button onClick={handleConversa}>
+                  <img src={conversa} alt="" />
+                </button>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
 
 export default Homepage;

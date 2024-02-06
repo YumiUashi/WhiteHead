@@ -3,9 +3,9 @@ import "./style.css";
 import { useNavigate } from "react-router-dom";
 import voltar from "../TelaCadastroPaciente/imagemTelaCadastroPaciente/voltar.png";
 
-const TelaCadastroPaciente = () => {
+const TelaEditarPaciente = () => {
   const [nome, setNome] = useState("");
-  const [sobrenome, setSobreNome] = useState("");
+  const [cpf, setCpf] = useState("");
   const [email, setEmail] = useState("");
   const [Celular, setCelular] = useState("");
   const handleVoltar = () => {
@@ -22,8 +22,8 @@ const TelaCadastroPaciente = () => {
     navigate("/Homepage");
   };
   return (
-    <div id="TelaCadastroPaciente">
-      <div id="formpac" className="telaCadastroTudo">
+    <div id="TelaEditarPaciente">
+      <div id="formpac" className="telaEditarTudo">
         <form className="form" onSubmit={handleSubmit}>
           <div className="cima">
             <button
@@ -34,7 +34,7 @@ const TelaCadastroPaciente = () => {
             >
               <img src={voltar} alt="voltar" />
             </button>
-            <h1>Adicionar paciente</h1>
+            <h1>Atualizar paciente</h1>
           </div>
           <div className="meio">
             <div className="field">
@@ -53,8 +53,8 @@ const TelaCadastroPaciente = () => {
                 type="Sobrenome"
                 name="Sobrenome"
                 id="Sobrenome"
-                value={sobrenome}
-                onChange={(e) => setSobreNome(e.target.value)}
+                value={cpf}
+                onChange={(e) => setCpf(e.target.value)}
               />
             </div>
             <div className="field">
@@ -84,7 +84,7 @@ const TelaCadastroPaciente = () => {
               type="submit"
               onClick={handleContinuar}
             >
-              Adicionar
+              Confirmar edição
             </button>
           </div>
         </form>
@@ -93,4 +93,4 @@ const TelaCadastroPaciente = () => {
   );
 };
 
-export default TelaCadastroPaciente;
+export default TelaEditarPaciente;
