@@ -21,11 +21,15 @@ const ChatPage = () => {
   };
 
   const handlePageSuggeston = () => {
-    navigate("/ChatSuggeston");
+    navigate("../ChatSuggeston");
   };
 
   const handleChatSintesis = () => {
-    navigate("/ChatSintesis");
+    navigate("../ChatSintesis");
+  };
+
+  const handleVoltar = () => {
+    navigate("../Homepage");
   };
 
   // const handleChatPage = () => {
@@ -38,10 +42,10 @@ const ChatPage = () => {
         <div id="header">
           <div className="voltar">
             <img className="iconVoltar" src={arrow} alt="voltar" />
-            <button className="btnVoltar">Voltar</button>
+            <button onClick={handleVoltar} className="btnVoltar">Voltar</button>
           </div>
           <div className="nome">
-            <h2>nome da lenda</h2>
+            <h2>Nome Paciente</h2>
             <img className="iconName" src={personCropCircle} alt="" />
           </div>
         </div>

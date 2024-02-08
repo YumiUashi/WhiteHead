@@ -12,6 +12,8 @@ import TelaCadastroUsuarioNovo from "./pages/CadastroUsuarioNovo/TelaCadastroUsu
 import TelaEditarPaciente from "./pages/TelaEditarPaciente";
 import TelaDeletarPaciente from "./pages/TelaDeletarPaciente";
 import ChatPage from "./pages/ChatPage";
+import ChatSintesis from "./pages/ChatSintesis";
+import ChatSuggeston from "./pages/ChatPageSuggeston";
 
 const AppRoutes = () => {
   return (
@@ -40,6 +42,8 @@ const AppRoutes = () => {
           element={<TelaEditarPaciente></TelaEditarPaciente>}
         ></Route>
         <Route exact path="/ChatPage" element={<ChatPage></ChatPage>}></Route>
+        <Route exact path="/ChatSintesis" element={<ChatSintesis></ChatSintesis>}></Route>
+        <Route exact path="/ChatSuggeston" element={<ChatSuggeston></ChatSuggeston>}></Route>
         <Route path="/" element={<Navigate to="/login" />} />
       </Routes>
     </Router>

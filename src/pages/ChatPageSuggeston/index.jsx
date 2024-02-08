@@ -8,7 +8,7 @@ import personCropCircle from "../ChatPage/imagemChatPage/person.crop.circle.png"
 import waveFormAndMagnifyingglass from "../ChatPage/imagemChatPage/waveform.and.magnifyingglass.png";
 import waveFormAndMic from "../ChatPage/imagemChatPage/waveform.and.mic.png";
 
-const ChatPage = () => {
+const ChatSuggeston = () => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
   const navigate = useNavigate();
@@ -25,11 +25,15 @@ const ChatPage = () => {
   // };
 
   const handleChatSintesis = () => {
-    navigate("/ChatSintesis");
+    navigate("../ChatSintesis");
   };
 
   const handleChatPage = () => {
-    navigate("/ChatPage");
+    navigate("../ChatPage");
+  };
+
+  const handleVoltar = () => {
+    navigate("../Homepage");
   };
 
   return (
@@ -38,10 +42,10 @@ const ChatPage = () => {
         <div id="header">
           <div className="voltar">
             <img className="iconVoltar" src={arrow} alt="voltar" />
-            <button className="btnVoltar">Voltar</button>
+            <button onClick={handleVoltar} className="btnVoltar">Voltar</button>
           </div>
           <div className="nome">
-            <h2>nome da lenda</h2>
+            <h2>Nome Paciente</h2>
             <img className="iconName" src={personCropCircle} alt="" />
           </div>
         </div>
@@ -83,4 +87,4 @@ const ChatPage = () => {
   );
 };
 
-export default ChatPage;
+export default ChatSuggeston;

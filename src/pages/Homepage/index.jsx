@@ -13,14 +13,14 @@ const Homepage = () => {
   const handleCadastroPaciente = () => {
     navigate("/TelaCadastroPaciente");
   };
-  const handleEditar = (id) => {
+  const handleEditar = () => {
     navigate("/TelaEditarPaciente/");
   };
   const handleDeletar = () => {
     navigate("../TelaDeletarPaciente");
   };
   const handleConversa = () => {
-    navigate("");
+    navigate("../ChatPage");
   };
 
   const searchLowerCase = search.toLocaleLowerCase();
@@ -55,7 +55,7 @@ const Homepage = () => {
                 <button onClick={handleDeletar}>
                   <img src={deletar} alt="" />
                 </button>
-                <button onClick={handleEditar(pac.id)}>
+                <button onClick={handleEditar}>
                   <img src={editar} alt="" />
                 </button>
                 <button onClick={handleConversa}>
